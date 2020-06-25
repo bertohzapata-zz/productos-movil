@@ -7,14 +7,21 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MessageComponentModule } from '../message/message.module';
 
+import { ProductosService } from '../services/productos.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     MessageComponentModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    HttpClientModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [
+    ProductosService
+  ]
 })
 export class HomePageModule {}
